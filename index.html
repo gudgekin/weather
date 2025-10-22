@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="fade-in">
+<main class="container">
+
+<!--Current Weather Section--> 
+<section class="current"> 
+  <!--Search Form and Button-->
+  <form id="search-form" class="search-form">
+    <fieldset class="search-fieldset">
+    <legend></legend>
+    <label for="search-input"></label>
+    <input id="search-input" class="search-input" type="text"  placeholder="City, Country, Location"/>
+    <button id="search-button" class="search-button" type="submit">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    </fieldset>
+  </form>
+  <!--End Search Form-->
+<!--<h1>Weather</h1>-->
+  <!--Location-->
+  <p id="place" class="place">San Francisco</p>
+    <!--Date and Time-->
+  <p class="date-time"><!--p date-time-->
+    <span id="today" class="today"></span>
+    <span class="bullet"> • </span>
+    <span id="time-now" class="time-now"></span>
+  </p><!--p date-time-->
+
+  <!--Temperature Display-->
+  <div class="temp-deg-container">
+    <div id="temperature" class="temperature"></div>
+    <div id="degree-symbol" class="degree-symbol">°</div>
+    <div class="degrees-container">
+      <button id="degrees-unit" class="degrees-unit"></button>
+    </div>
+    <div class="conditions-icon">
+      <span id="conditions-span"></span>
+    </div>
+   
+  </div><!--div-temperature-->
+
+  <!--Conditions Display-->
+  
+  <div id="conditions-area" class="conditions-area"> 
+  <p id="conditions-text" class="conditions-text"></p>
+  </div><!--conditions-area-->
+
+  <nav>
+    <button id="current-location-button" type="submit" class="current-location-button" title="Get Current Location">
+      <i class="fa-solid fa-location-dot"></i>
+    </button>
+  </nav>
+</section><!--End Current Weather-->
+
+<!-- Forecasts Section -->
+<section class="forecasts">
+  <table class="forecasts-table">
+    <caption></caption>
+  <thead>
+    <tr>
+      <th id="d1" scope="col"></th>
+      <th id="d2" scope="col"></th>
+      <th id="d3" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr> 
+      <td id="forecast-1" class="cell"></td>
+      <td id="forecast-2" class="cell"></td>
+      <td id="forecast-3" class="cell"></td>
+    </tr>
+    <!--
+    <tr>
+      <td id="f1" class="cell-txt"></td>
+      <td id="f2" class="cell-txt"></td>
+      <td id="f3" class="cell-txt"></td>  
+    </tr>
+    -->
+  </tbody>
+  <tfoot class="tfoot">
+    <tr>
+      <td colspan="3" class="td-foot">
+      </td>
+    </tr>
+  </tfoot>
+  </table>
+</section><!-- End Forecasts Section -->
+<footer id="footer" class="footer">
+          <span class="span-footer">
+          <a href="https://www.weatherapi.com/" title="Free Weather API">Powered by weatherapi.com</a>    
+          <a href="https://www.weatherapi.com/" title="Free Weather API">     
+            <img id="weatherapi-logo" src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png" alt="weatherapi logo" width="50" class="logo">
+          </a>
+        </span><!--span-footer-->
+</footer>
+</main>
+</body>
+</html>
